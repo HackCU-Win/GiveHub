@@ -101,6 +101,14 @@ p.black{
 	margin-left: 60px;
 	opacity: 1;
 }
+.how-to-twitter-feed
+{
+	width: 100%;
+	height: 400px;
+	margin-left: 60px;
+	opacity: 1;
+}
+
 a:link {
     color: blue;
 }
@@ -268,7 +276,16 @@ input[type=number]::-webkit-outer-spin-button {
 	}
 	.organization-list {
 		background-size: 400%;
-	
+	}
+	.how-to-twitter-feed {
+		display: none;
+	}
+	.how-to-color {
+		height: 500px;
+	}
+	.organization-container {
+		margin-top: 100px;
+	}
 }
 
 
