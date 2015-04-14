@@ -4,7 +4,7 @@ block content
 
     div(class="container")
         div(class="row")
-            div(class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3")
+            div(class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1")
                 div(class="row")
                     // Begin MailChimp Signup Form
                     #mc_embed_signup
@@ -32,15 +32,11 @@ block content
         div(class="container")
             h2 Partnered Charities
             div(class="row")
-                div(class="col-md-5 col-md-push-6 col-xs-12")
-                    div(class="twitter-feed")
-                        a(class="twitter-timeline",href="https://twitter.com/hashtag/GivingWithGiveHub",data-widget-id="587056023506026496") #GivingWithGiveHub Tweets
-                        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-                div(class="col-md-6 col-md-pull-5 col-xs-12")
+                div(class="col-md-6 col-xs-12")
                     div(class="curved-border")
                         h3 Participate
                         p.black If you want to register your charity with us and launch with us, please register here and we will contact you:
-                            div(class="col-md-10 col-md-offset-1")
+                            div(class="col-xs-10 col-xs-offset-1")
                                 div(class="row")
                                     #mc_embed_signup
                                         form#mc-embedded-subscribe-form.validate(action='//herokuapp.us10.list-manage.com/subscribe/post?u=a489e275b5f5426a0ef3d30d4&id=f5f55ffd21', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
@@ -56,5 +52,7 @@ block content
                                                 .clear
                                                     div(class="col-md-6 col-md-offset-3")
                                                         input#mc-embedded-subscribe.button(type='submit', class="btn btn-default btn-lg btn-block outline", value='Subscribe', name='subscribe')
-
-    
+                div(class="col-md-5 col-xs-12")
+                    div(class="twitter-feed")
+                        a(class="twitter-timeline",href="https://twitter.com/hashtag/GivingWithGiveHub",data-widget-id="587056023506026496") #GivingWithGiveHub Tweets
+                        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

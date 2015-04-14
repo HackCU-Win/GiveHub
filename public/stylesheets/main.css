@@ -218,9 +218,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 ::-webkit-scrollbar-thumb:hover {
 	background:#7d7d7d;
-}			
+}		
 
-@media only screen and (max-device-width:600px){
+@media only screen and (max-device-width:1200px) and (min-device-width:768px){
+	body {
+		background-size: 180%;
+	}
+}
+
+@media only screen and (max-device-width:767px){
 
 	.payment-shift {
 		padding-left: 10px;
@@ -236,10 +242,11 @@ input[type=number]::-webkit-outer-spin-button {
 		font-size: 40px;
 	}
 	.curved-border {
-		height: 350px;
+		height: 400px;
+		margin-bottom: 30px;
 	}
 	.twitter-feed {
-		margin-bottom: 480px;
+		margin-bottom: 30px;
 		margin-left: 0px;
 	}
 	.no-mobile {
@@ -250,8 +257,9 @@ input[type=number]::-webkit-outer-spin-button {
 	}
 	.organization-list {
 		background-size: 400%;
-	}
+	
 }
+
 
 .no-margin-below {
   margin-bottom: 10px;
