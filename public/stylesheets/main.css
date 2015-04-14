@@ -1,6 +1,6 @@
 body {
 	margin: 0px;
-  background-color: black;
+  	background-color: black;
 	background-image: url('/images/background_img.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -239,13 +239,13 @@ input[type=number]::-webkit-outer-spin-button {
 	background:#7d7d7d;
 }		
 
-@media only screen and (max-device-width:1200px) and (min-device-width:768px){
+@media only screen and (max-width:1200px) and (min-width:768px){
 	body {
-		background-size: 180%;
+		background-size: 150%;
 	}
 }
 
-@media only screen and (max-device-width:767px){
+@media only screen and (max-width:767px){
 
 	.payment-shift {
 		padding-left: 10px;
