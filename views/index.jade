@@ -1,6 +1,7 @@
 extends layout.jade
 
 block content
+    h4 If you'd like to be notified when our service goes into Beta, follow us @GiveWithGiveHub or enter your email below.
 
     div(class="container")
         div(class="row")
@@ -25,19 +26,48 @@ block content
 
         div(class="row")
             div(class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3")
-                button(id="howToButton",type="button",class="btn btn-default btn-lg btn-block outline top-padding") Teach me how
+                button(id="howToButton",type="button",class="btn btn-default btn-lg btn-block outline top-padding") How does it work?
         
         div(id="howToDiv", style="display:none", class="row")
             div(class="col-md-6 col-xs-12 how-to-color", role="navigation")
                 ul(class="nav nav-tabs nav-justified how-to")
                     li(role="presentation",class="active")
-                        a(id="new-tweet-btn") New Tweet
+                        a(id="new-tweet-btn") Donate
                     li(role="presentation")
-                        a(id="retweet-btn") Retweet
+                        a(id="retweet-btn") Match
                 div(id="howToTweet", style="display:block")
-                    h4 Testing
+                    p
+                        | Donating is as simple as sending a Tweet.  Use the @handle of the organization you'd like to give to, 
+                        | a $ amount, and #GivingWithGiveHub.
+                    blockquote.twitter-tweet(lang='en')
+                        p
+                            | I really love what you&apos;re doing at 
+                            a(href='https://twitter.com/RedCross') @RedCross
+                            | . I am donating $42 via 
+                            a(href='https://twitter.com/hashtag/GivingWithGiveHub?src=hash') #GivingWithGiveHub
+                            a(href='https://twitter.com/hashtag/HackCU?src=hash') #HackCU
+                            | &mdash; Adrian Chen (@Adrian_Chen9) 
+                            a(href='https://twitter.com/Adrian_Chen9/status/587320234643562496') April 12, 2015
+                        script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
+                    p
+                        | We will automatically tweet you back a URL to donate straight to the charity you specified.
+
                 div(id="howToRetweet", style="display:none")
-                    h4 WOOT
+                    p
+                        | We believe in the power of many.  That's why we've made it so that a ReTweet allows anyone - without any registration - 
+                        | to match your donation.  Nothing will be done without your permission, but if you ReTweet someone who is 
+                        | #GivingWithGiveHub we will tweet you your own link to donate.
+                    blockquote.twitter-tweet(lang='en')
+                        p
+                            | Thanks for donating $42 to 
+                            a(href='https://twitter.com/RedCross') @RedCross
+                            | , 
+                            a(href='https://twitter.com/VictorRojas_94') @VictorRojas_94
+                            | . Please visit: 
+                            a(href='http://t.co/5MZ0njmAsL') http://t.co/5MZ0njmAsL
+                            | &mdash; GivingWithGiveHub (@GiveWithGiveHub) 
+                            a(href='https://twitter.com/GiveWithGiveHub/status/587322434883346432') April 12, 2015
+                        script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
 
 
             div(class="col-md-5 col-xs-12")
@@ -77,6 +107,3 @@ block content
                     div(class="twitter-feed")
                         a(class="twitter-timeline",href="https://twitter.com/hashtag/GivingWithGiveHub",data-widget-id="587056023506026496") #GivingWithGiveHub Tweets
                         script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-
-                        
