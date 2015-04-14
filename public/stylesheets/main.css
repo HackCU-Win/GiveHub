@@ -239,6 +239,10 @@ input[type=number]::-webkit-outer-spin-button {
 	background:#7d7d7d;
 }		
 
+.inline-tweet {
+    margin-left: 25px;
+}
+
 @media only screen and (max-device-width:1200px) and (min-device-width:768px){
 	body {
 		background-size: 180%;
@@ -286,12 +290,16 @@ input[type=number]::-webkit-outer-spin-button {
 	.organization-container {
 		margin-top: 100px;
 	}
+    .inline-tweet {
+        margin-left: 5px;
+    }
 }
 
 
 .no-margin-below {
   margin-bottom: 10px;
 }
+
 
 /*
 
