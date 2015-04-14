@@ -20,3 +20,17 @@ $(document).ready(function(){
     $('#howToDiv').toggle("slow");
   });
 });
+
+$(document).ready(function(){
+  $('#new-tweet-btn').click(function() {
+    $('#howToTweet').toggle("slow");
+    $('#howToRetweet').toggle("slow");
+  });
+});
+
+$(document).ready(function(){
+  $('#retweet-btn').click(function() {
+    $('#howToTweet').toggle("slow");
+    $('#howToRetweet').toggle("slow");
+  });
+});

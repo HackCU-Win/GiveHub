@@ -114,6 +114,15 @@ a:visited {
 	font-size: 19px;
 }
 
+.how-to {
+	margin-top: 10px;
+}
+
+.how-to-color {
+	background-color: rgba(190, 190, 190, 0.8);
+	height: 400px;
+}
+
 .container-fluid{
 	margin-left: 0px;
 	margin-right: 0px;
@@ -132,7 +141,8 @@ a:visited {
 	background-position: bottom;
 }
 .btn-default.top-padding {
-	margin-top: 40px;
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 .input-lg.big-padding {
 	margin-top: 60px;

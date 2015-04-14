@@ -21,19 +21,34 @@ block content
                                     input(type='text', name='b_a489e275b5f5426a0ef3d30d4_8ee3b3f6b2', tabindex='-1', value='')
                                 .clear
                                     div(class="col-md-6 col-md-offset-3")
-                                        input#mc-embedded-subscribe.button(class="btn btn-default btn-lg btn-block outline", type='submit', value='Subscribe', name='subscribe')
-        
-        div(class="row")
-            div(class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3")
-                a(href="#organizations",role="button",class="btn btn-default btn-lg btn-block outline top-padding") I represent a charity
+                                        input#mc-embedded-subscribe.button(class="btn btn-default btn-lg btn-block outline", type='submit', value='Subscribe', name='subscribe')    
 
         div(class="row")
             div(class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3")
                 button(id="howToButton",type="button",class="btn btn-default btn-lg btn-block outline top-padding") Teach me how
         
-        div(id="howToDiv", style="display:block")
-            h3 HELLO WORLD
+        div(id="howToDiv", style="display:none", class="row")
+            div(class="col-md-6 col-xs-12 how-to-color", role="navigation")
+                ul(class="nav nav-tabs nav-justified how-to")
+                    li(role="presentation",class="active")
+                        a(id="new-tweet-btn") New Tweet
+                    li(role="presentation")
+                        a(id="retweet-btn") Retweet
+                div(id="howToTweet", style="display:block")
+                    h4 Testing
+                div(id="howToRetweet", style="display:none")
+                    h4 WOOT
 
+
+            div(class="col-md-5 col-xs-12")
+                    div(class="twitter-feed")
+                        a(class="twitter-timeline",href="https://twitter.com/hashtag/GivingWithGiveHub",data-widget-id="587056023506026496") #GivingWithGiveHub Tweets
+                        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+        div(class="row")
+            div(class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3")
+                a(href="#organizations",role="button",class="btn btn-default btn-lg btn-block outline top-padding") I represent a charity
+    
     div(class="container-fluid organization-container",id="organizations") 
         div(class="container")
             h2 Partnered Charities
@@ -62,3 +77,6 @@ block content
                     div(class="twitter-feed")
                         a(class="twitter-timeline",href="https://twitter.com/hashtag/GivingWithGiveHub",data-widget-id="587056023506026496") #GivingWithGiveHub Tweets
                         script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+                        
