@@ -23,14 +23,22 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('#new-tweet-btn').click(function() {
-    $('#howToTweet').toggle("slow");
-    $('#howToRetweet').toggle("slow");
+    if($('#re-li').attr('class') === 'active'){
+        $('#howToTweet').toggle("slow");
+        $('#howToRetweet').toggle("slow");
+    }
+    $('#new-li').toggleClass('active',true);
+    $('#re-li').toggleClass('active',false);
   });
 });
 
 $(document).ready(function(){
   $('#retweet-btn').click(function() {
-    $('#howToTweet').toggle("slow");
-    $('#howToRetweet').toggle("slow");
+    if($('#new-li').attr('class') === 'active'){
+        $('#howToRetweet').toggle("slow");
+        $('#howToTweet').toggle("slow");
+    }
+    $('#new-li').toggleClass('active',false);
+    $('#re-li').toggleClass('active',true);
   });
 });
