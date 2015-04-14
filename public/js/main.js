@@ -14,3 +14,9 @@ $(document).ready(function(){
     }
   });
 });
+
+$(document).ready(function(){
+  $('#howToButton').click(function() {
+    $('#howToDiv').toggle("slow");
+  });
+});
