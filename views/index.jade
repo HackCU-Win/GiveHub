@@ -11,7 +11,7 @@ block content
                         form#mc-embedded-subscribe-form.validate(action='//herokuapp.us10.list-manage.com/subscribe/post?u=a489e275b5f5426a0ef3d30d4&id=8ee3b3f6b2', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
                             #mc_embed_signup_scroll
                                 .mc-field-group
-                                    input#mce-EMAIL.required.email(class="form-control", type='email', value='', name='EMAIL')
+                                    input#mce-EMAIL.required.email(class="form-control input-lg big-padding", type='email', value='', name='EMAIL', placeholder="Email")
                                 #mce-responses.clear
                                     #mce-error-response.response(style='display:none')
                                     | &#x9;&#x9;
@@ -20,16 +20,12 @@ block content
                                 div(style='position: absolute; left: -5000px;')
                                     input(type='text', name='b_a489e275b5f5426a0ef3d30d4_8ee3b3f6b2', tabindex='-1', value='')
                                 .clear
-                                    input#mc-embedded-subscribe.button(class="btn btn-default", type='submit', value='Subscribe', name='subscribe')
-                //    form(name="newOrgReg", enctype='application/json', action="/newOrganization", method="post")
-                //        div(class="form-group")
-                //            input(type="email",class="form-control input-lg",id="exampleInputEmail1",placeholder="Email")
-                //div(class="row")
-                //    div(class="col-md-6 col-md-offset-3")
-                //        button(class="btn btn-default btn-lg btn-block outline",type="button") Submit
+                                    div(class="col-md-6 col-md-offset-3")
+                                        input#mc-embedded-subscribe.button(class="btn btn-default btn-lg btn-block outline", type='submit', value='Subscribe', name='subscribe')
+        
         div(class="row")
             div(class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3")
-                a(href="#organizations",role="button",class="btn btn-default btn-lg btn-block outline top-padding") I represent a charity.
+                a(href="#organizations",role="button",class="btn btn-default btn-lg btn-block outline top-padding") I represent a charity
 
 
     div(class="container-fluid organization-container",id="organizations") 
@@ -49,7 +45,7 @@ block content
                                     #mc_embed_signup
                                         form#mc-embedded-subscribe-form.validate(action='//herokuapp.us10.list-manage.com/subscribe/post?u=a489e275b5f5426a0ef3d30d4&id=f5f55ffd21', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
                                             #mc_embed_signup_scroll
-                                                input#mce-EMAIL.required.email(class="form-control", type='email', value='', name='EMAIL')
+                                                input#mce-EMAIL.required.email(class="form-control input-lg bot-padding", type='email', value='', name='EMAIL',placeholder="Email")
                                                 #mce-responses.clear
                                                     #mce-error-response.response(style='display:none')
                                                     | &#x9;&#x9;
@@ -58,12 +54,7 @@ block content
                                                 div(style='position: absolute; left: -5000px;')
                                                     input(type='text', name='b_a489e275b5f5426a0ef3d30d4_f5f55ffd21', tabindex='-1', value='')
                                                 .clear
-                                                    input#mc-embedded-subscribe.button(type='submit', class="btn btn-default", value='Subscribe', name='subscribe')
-                                    //div(class="form-group")
-                                        //input(type="email",class="form-control input-lg",id="exampleInputEmail1",placeholder="Enter email")
-                                div(class="row")
-                                    div(class="col-md-6 col-md-offset-3")
-                                        //button(class="btn btn-default btn-lg btn-block outline",type="button") Submit
-
+                                                    div(class="col-md-6 col-md-offset-3")
+                                                        input#mc-embedded-subscribe.button(type='submit', class="btn btn-default btn-lg btn-block outline", value='Subscribe', name='subscribe')
 
     

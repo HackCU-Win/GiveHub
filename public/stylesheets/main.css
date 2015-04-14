@@ -133,6 +133,14 @@ a:visited {
 .btn-default.top-padding {
 	margin-top: 90px;
 }
+.input-lg.big-padding {
+	margin-top: 60px;
+	margin-bottom: 10px;
+}
+
+.input-lg.bot-padding {
+	margin-bottom: 10px;
+}
 
 .btn.outline {
     background: none;
