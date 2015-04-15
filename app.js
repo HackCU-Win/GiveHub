@@ -38,3 +38,24 @@ var server = app.listen(app.get('port'), function() {
     console.log('App listening at http://%s:%s', host, port)
 })
 
+var stripe = require("stripe")("sk_test_BQokikJOvBiI2HlWgH4olfQ2");
+var bodyParser = require('body-parser')
+
+app.use(bodyParser());
+app.post('/payment', function(request, response){
+  // (Assuming you're using express - expressjs.com)
+  // Get the credit card details submitted by the form
+  var stripeToken = request.body.stripeToken;
+
+  var charge = stripe.charges.create({
+    amount: 1000, // amount in cents, again
+    currency: "usd",
+    source: stripeToken,
+    description: "Example charge"
+  }, function(err, charge) {
+    if (err && err.type === 'StripeCardError') {
+      // The card has been declined
+    }
+  });
+});
+

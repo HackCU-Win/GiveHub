@@ -1,21 +1,40 @@
 extends layout.jade
 
 block content
-    - organization ? true : organization = '';
-    h2#header="Donate to @" + organization
-    div(class="container payment-shift")
-        div(class="col-md-3 col-md-offset-4")
-            form(id="checkout", method="post", action="/checkout")
-                div(id="dropin")
-                if !amount
-                    div(class="row")
-                        input(id="amount" type="text" , class = "form-control input-orgForm" , placeholder = "Amount")
-                - amt = amount; if (!amt) amt = '';
-                div(class="row")
-                    button(type="submit",class="btn btn-orgForm btn-lg btn-block outline no-margin-below", disabled)= "Donate " + amt
-                    p Donation coming soon.  We must first set a few things up with the charity.  Sorry for any inconvenience.
+	- organization ? true : organization = '';
+	h2#header="Donate to @" + organization
+	div(class="container payment-shift")
+		div(class="col-md-3 col-md-offset-4")
+			if !amount
+				div(class="row")
+					input(id="amount" type="text" , class = "form-control input-orgForm" , placeholder = "Amount")
+			- amt = amount; if (!amt) amt = '';
+			div(class="row")
+				script(src='https://checkout.stripe.com/checkout.js')
+				button(id="donateButton",class="btn btn-default btn-lg btn-block outline top-padding") Donate
+				script.
+					var handler = StripeCheckout.configure({
+						key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+						image: '/img/documentation/checkout/marketplace.png',
+						token: function(token) {
+							$.post("/payment", {token: token});
+						}
+					});
 
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js")
-    script(src="https://js.braintreegateway.com/v2/braintree.js")
-    script(src="/js/braintree.js")
-    link(rel='stylesheet', href='/stylesheets/braintree.css')
+					$('#donateButton').on('click', function(e) {
+						// Open Checkout with further options
+						handler.open({
+							name: 'Stripe.com',
+							description: '2 widgets',
+							amount: 2000
+						});
+						e.preventDefault();
+					});
+
+					// Close Checkout on page navigation
+					$(window).on('popstate', function() {
+						handler.close();
+					});
+				p Donation coming soon.  We must first set a few things up with the charity.  Sorry for any inconvenience. We are currently only accepting USD and bitcoin, with more currencies to come.
+	script(type="text/javascript",src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js")
+	link(rel='stylesheet', href='/stylesheets/braintree.css')
