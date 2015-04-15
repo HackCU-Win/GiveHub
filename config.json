@@ -1,6 +1,6 @@
 {
   "deploy" : {
-    "url" : "http://givehub.herokuapp.com"
+    "url" : "https://givehub.herokuapp.com"
   },
   "twitter" : {
     "stream" : true
