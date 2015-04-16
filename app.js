@@ -2,10 +2,21 @@ var express = require('express');
 var app = express();
 var config = require('./config.json');
 var orgs = require('./data/orgs.json');
-if (config.twitter.stream){
+
+env = process.env.NODE_ENV || 'development';
+
+var forceSsl = function (req, res, next) {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
+    return res.redirect(['https://', req.get('Host'), req.url].join(''));
+  }
+  return next();
+};
+
+if (env === 'production') {
+  app.use(forceSsl);
   var stream = require('./controllers/twitter')();
-} else {
-  console.log('Twitter not being run on server');
+} else{
+  console.log("no twitter || forcessl");
 }
 
 // use jade as the view engine
@@ -33,6 +44,7 @@ app.set('port', (process.env.PORT || 3000))
 
 var server = app.listen(app.get('port'), function() {
 
+
     var host = server.address().address
     var port = server.address().port
     console.log('App listening at http://%s:%s', host, port)
@@ -45,16 +57,25 @@ app.use(bodyParser());
 app.post('/payment', function(request, response){
   // (Assuming you're using express - expressjs.com)
   // Get the credit card details submitted by the form
-  var stripeToken = request.body.stripeToken;
+  var token = request.body.token;
+  var amount = request.body.amount;
 
+  console.log(token);
+  console.log(amount);
   var charge = stripe.charges.create({
-    amount: 1000, // amount in cents, again
+    amount: amount, // amount in cents, again
     currency: "usd",
-    source: stripeToken,
+    source: token,
     description: "Example charge"
   }, function(err, charge) {
     if (err && err.type === 'StripeCardError') {
       // The card has been declined
+    } else if (err){
+      console.log("An error occured with payment");
+      console.log(JSON.stringify(err));
+    } else {
+      // Okay
+      console.log("successful txn");
     }
   });
 });

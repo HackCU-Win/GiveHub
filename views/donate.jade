@@ -13,11 +13,12 @@ block content
 				script(src='https://checkout.stripe.com/checkout.js')
 				button(id="donateButton",class="btn btn-default btn-lg btn-block outline top-padding") Donate
 				script.
+					var amount = "#{amount}";
 					var handler = StripeCheckout.configure({
 						key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
 						image: '/img/documentation/checkout/marketplace.png',
 						token: function(token) {
-							$.post("/payment", {token: token});
+							$.post("/payment", {token: token.id, amount: amount * 100});
 						}
 					});
 
@@ -26,7 +27,7 @@ block content
 						handler.open({
 							name: 'Stripe.com',
 							description: '2 widgets',
-							amount: 2000
+							amount: amount * 100
 						});
 						e.preventDefault();
 					});
