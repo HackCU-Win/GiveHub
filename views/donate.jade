@@ -11,7 +11,7 @@ block content
 			- amt = amount; if (!amt) amt = '';
 			div(class="row")
 				script(src='https://checkout.stripe.com/checkout.js')
-				button(id="donateButton",class="btn btn-default btn-lg btn-block outline top-padding") Donate
+				button(id="donateButton",class="btn btn-default btn-lg btn-block outline top-padding", disabled)="Donate " + amt
 				script.
 					var amount = "#{amount}";
 					var handler = StripeCheckout.configure({
