@@ -6,10 +6,10 @@ var stream = function(){
     var config = require('../config.json');
 
     var client = new Twitter({
-      consumer_key: 'ZGZbn8Ub3CLK5czKbJ95q2q0m',
-      consumer_secret: '7ak6OHpgNt9zCOY414fSDmYyQEyfiyagLSmBIkySsB6HPLVtbK',
-      access_token_key: '3150658694-2atGSRb4hPi9AV8q06iOERWpcSf4h03EnZIzOXB',
-      access_token_secret: '8Eghx1DJaIK978n3bVbM9qujhP2oas0lgEpl7vSheXxTz'
+      consumer_key: 'x',
+      consumer_secret: 'x',
+      access_token_key: 'x',
+      access_token_secret: 'x'
     });
 
     console.log('Twitter initialized and listening');
