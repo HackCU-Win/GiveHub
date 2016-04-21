@@ -3,9 +3,9 @@ var brain = function(req, res) {
 
   var gateway = braintree.connect( {
     environment: braintree.Environment.Sandbox,
-    merchantId: "jqr8pbyt7prbsfhp",
-    publicKey: "3hsvxq4d4mxvwppc",
-    privateKey: "de2913aa208fa2e8e410d91587d36d42"
+    merchantId: "x",
+    publicKey: "x",
+    privateKey: "x"
   } );
 
   gateway.clientToken.generate( {}, function( err, response ) {
